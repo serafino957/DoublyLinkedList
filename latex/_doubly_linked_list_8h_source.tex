@@ -1,0 +1,41 @@
+\doxysection{Doubly\+Linked\+List.\+h}
+\hypertarget{_doubly_linked_list_8h_source}{}\label{_doubly_linked_list_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOUBLY\_LINKED\_LIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOUBLY\_LINKED\_LIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Szablon\ listy\ dwukierunkowej}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }DoublyLinkedList\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Wewnętrzna\ struktura\ węzła}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ T\ data;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ Node*\ next;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ Node*\ prev;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Node(T\ val)\ :\ data(val),\ next(\textcolor{keyword}{nullptr}),\ prev(\textcolor{keyword}{nullptr})\ \{\}}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ Node*\ head;}
+\DoxyCodeLine{00020\ \ \ \ \ Node*\ tail;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ DoublyLinkedList();}
+\DoxyCodeLine{00024\ \ \ \ \ \string~DoublyLinkedList();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ addFront(T\ data);\ \ \textcolor{comment}{//\ Dodaj\ element\ na\ początek}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ addBack(T\ data);\ \ \ \textcolor{comment}{//\ Dodaj\ element\ na\ koniec}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ remove(T\ data);\ \ \ \ \textcolor{comment}{//\ Usuń\ element\ z\ listy}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ display()\ \textcolor{keyword}{const};\ \ \ \textcolor{comment}{//\ Wyświetl\ listę\ od\ początku}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ displayReverse()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Wyświetl\ listę\ od\ końca}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ clear();\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wyczyść\ listę}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}DoublyLinkedList.tpp"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
