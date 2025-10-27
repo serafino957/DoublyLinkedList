@@ -91,3 +91,9 @@ void DoublyLinkedList<T>::clear() {
     }
     head = tail = nullptr;
 }
+
+// Update 4: Implementation updated slightly
+
+
+
+// Fourth commit - minor code documentation
