@@ -34,3 +34,5 @@ public:
 #include "DoublyLinkedList.tpp"
 
 #endif
+
+// Update 2: Header minor edit
